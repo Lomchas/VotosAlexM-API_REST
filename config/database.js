@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const url = 'mongodb://127.0.0.1:27017/votaciones-(Alexander_M)-concejo';
+const url = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/votaciones-(Alexander_M)-concejo';
 
 mongoose.connect(url, {
     useNewUrlParser: true,
